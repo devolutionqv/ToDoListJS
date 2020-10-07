@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Template App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <div class="logo">
+      <p>TASK LIST </p>
+    </div>
+    <nav class="menu">
+      <ul class="menu-fx">
+        <li>Crear Tarea</li>
+        <li>Lista</li>
+      </ul>
+    </nav>
+  </header>
+  <main class="main-container">
+    <section class="main-form">
+      <div class="main-img">
+        <img
+          src="https://static.vecteezy.com/system/resources/previews/000/627/355/non_2x/vector-checklist-icon-symbol-sign.jpg" />
+      </div>
+      <form class="form">
+        <h2 class="txt-center">POR HACER</h2>
+        <div class="form-element">
+          <label for="title">Titulo:
+            <input id="title" type="text">
+            <label for="time">Hora Programada:</label>
+            <input id="time" type="time">
+            <fieldset>
+              <legend>Prioridad:</legend>
+              <div><input type="radio" id="high" name="importance" value="high" checked>
+                <label for="high">Alto</label>
+              </div>
+              <div><input type="radio" id="medium" name="importance" value="medium">
+                <label for="medium">Medio</label>
+              </div>
+              <div><input type="radio" id="low" name="importance" value="low">
+                <label for="low">Bajo</label>
+              </div>
+
+            </fieldset>
+            <label for="comment">Comentarios: </label>
+            <textarea id="comment"></textarea>
+            </input>
+            <small class="msg-input"></small>
+            <button id="btn-sub" class="btn btn-sub">Guardar</button>
+      </form>
+    </section>
+    <section class="main-tasks hide">
+      <section class="tasks">
+        <h2 class="txt-center">TAREAS PENDIENTES</h2>
+        <div class="sort-tasks">
+          <select id="sort-items">
+            <option id="high-low">De Alta a Baja</option>
+            <option id="low-high">De Baja a Alta</option>
+            <option id="filter-h">Solo Altas</option>
+            <option id="filter-m">Solo Medias</option>
+            <option id="filter-l">Solo Bajas</option>
+          </select>
+        </div>
+        <div class="tasks-container"></div>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+
+</html>

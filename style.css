@@ -1,0 +1,290 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-blue: #22364a;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  background-color: var(--bg-primary);
+}
+
+.header {
+  background-color: #22364a;
+  color: #ffffff;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 0.2em 0.95em;
+  height: 3em;
+  width: 100%;
+  height: 50px;
+}
+
+.header .logo {
+  width: 50%;
+}
+
+.header .menu {
+  width: 50%;
+}
+
+.menu ul {
+  list-style: none;
+}
+
+.menu .menu-fx {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.menu-fx li:hover {
+  font-weight: bold;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/*container*/
+
+.main-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0.5em;
+}
+
+.main-form {
+  margin-top: 100px;
+  border: 2px solid #333;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: var(--bg-primary);
+  box-shadow: 1.1em 1em 0.5em .01em rgb(190, 190, 190);
+}
+
+.main-img img {
+  width: 95px;
+  height: 95px;
+  margin-top: -50%;
+  z-index: 10;
+}
+
+.form h2 {
+  margin: 10px;
+}
+
+.form {
+  padding: 0.3em 0.6em;
+  align-self: flex-start;
+  width: 100%;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.form-element label,
+.form-element input,
+.form-element textarea {
+  display: block;
+  margin: 0.6em 0;
+}
+
+.form-element fieldset {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  column-gap: 100px;
+}
+
+
+.form-element input,
+.form-element textarea {
+  width: 100%;
+  border-radius: 0.2em;
+  border: 1px ridge var(--bg-blue);
+  padding: 0.11em 0.33em;
+}
+
+.form-element input {
+  text-align: center;
+}
+
+.btn {
+  width: 25%;
+  border-radius: 0.2em;
+  padding: 0.6em 0.4em;
+}
+
+.btn-sub {
+  display: block;
+  border: 1px ridge var(--bg-blue);
+  background-color: var(--bg-blue);
+  color: var(--bg-primary);
+  margin: 0 auto;
+  font-weight: bold;
+}
+
+.btn-sub:hover {
+  border: 1px ridge #2f5e8d;
+  background-color: #2f5e8d;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.main-tasks {
+  margin-top: 100px;
+  border: 2px solid #333;
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  background-color: var(--bg-primary);
+  box-shadow: 1.1em 1em 0.5em .01em rgb(190, 190, 190);
+}
+
+.sort-tasks {
+  width: 100%;
+}
+
+.sort-tasks #sort-items {
+  display: block;
+  margin: 0.3em auto;
+  width: 255px;
+  text-align: center;
+  border: 0.15em solid #22364a;
+  border-radius: 0.3em;
+}
+
+.task {
+  margin: 0 0.9em;
+  padding: 0 0.6em;
+}
+
+.box {
+  border-radius: 0.3em;
+  background-color: var(--bg-blue);
+  color: var(--bg-primary);
+  margin: 0.3em 0;
+  flex-grow: 1;
+  flex-basis: 500px;
+}
+
+.task {
+  /* width: 270px; */
+  height: max-content;
+  text-align: center;
+}
+
+
+.task-header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.3em;
+
+}
+
+.task-header-high {
+  background-color: red;
+}
+
+.task-header-medium {
+  background-color: rgb(206, 236, 33)
+}
+
+.task-header-low {
+  background-color: green;
+}
+
+.tasks-container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6em 0.9em;
+  padding: 0 0.6em;
+  margin: 0.9em auto;
+}
+
+.task-time,
+.task-title,
+.task-comment {
+  margin: 0.6em 0;
+  padding: 0.3em 0;
+}
+
+.form-element .task-input-error {
+  border: 1px ridge red !important;
+}
+
+.form-element .task-input-pass {
+  border-color: green;
+}
+
+.task-title {
+  border-bottom: 1px solid var(--bg-primary);
+}
+
+.task-comment {
+  text-align: justify;
+}
+
+.msg-input {
+  text-align: center;
+  margin: 0.9em 0;
+  display: block;
+}
+
+.msg-color-error {
+  color: red;
+}
+
+.msg-color-pass {
+  color: green;
+}
+
+.hide {
+  display: none;
+}
+
+@media only screen and (min-width: 800px) {
+  .main-tasks {
+    max-width: 80%;
+  }
+
+  .tasks {
+    width: 100%;
+  }
+
+  .main-img img {
+    width: 125px;
+    height: 125px;
+  }
+
+  .tasks-container {
+    max-width: 1800px;
+  }
+}
